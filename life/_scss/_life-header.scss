@@ -1,0 +1,115 @@
+/*--------------------header--------------------*/
+	.header{
+		background: $life-color-main;
+		.head_caption{
+			background: $life-color-sub;
+			border-bottom: 1px dashed #fff;
+			h1{
+				width: $inner-width;
+				margin: 0 auto;
+				font-size: 12px;
+				padding: 8px 0;
+				color: #fff;
+			}
+			@include clearfix;
+		}
+	}
+
+	.head_inner{
+		width: $inner-width;
+		margin: 0 auto;
+		@include clearfix;
+		p{
+			a img{
+				margin-top: 30px;
+				float: left;
+				@include hoverEffect;
+			}
+		}
+	}/*----------.head_inner----------*/
+
+	.head_right{
+		float: right;
+		width: 650px;
+		ul.head_bannar{
+			margin-top: 10px;
+			float: right;
+			clear: both;
+			li{
+				float: left;
+				margin-right: 10px;
+				@include box-shadow(0px -2px 4px #ccc,0px 1px 6px #666);
+				@include border-radius(8px);
+			}
+		}/*----------.head_bannar----------*/
+		.head_navi{
+			a{@include transition(background 0.2s ease-in-out);}
+			a:hover{
+				background-color: $life-color-tri;
+				opacity: 1 !important;
+				@include transition(background 0.2s ease-in-out);
+			}
+			.beginner{
+				background-image: url(../img/beginner.png);
+				background-repeat:no-repeat;
+				background-position: 10px center;
+				padding-left: 27px;
+				padding-right: 12px;
+			}
+			.head_guide,.head_login{
+				margin:15px 0 ;
+				float: left;
+				li{
+					float: left;
+					margin-right: 10px;
+					a{font-size: 80% !important;
+						&.login{@include box-shadow(0px 5px 5px #000);
+							&:active{@include box-shadow(0px 0px 0px #000);}
+						}
+					}
+				}
+			}/*----------.head_login----------*/
+		}/*----------.head_navi----------*/
+	}/*----------.head_right----------*/
+	.snsicn{
+		float: right;
+		li{
+			float: left;
+			width: 30px;
+			height: 30px;
+			margin-right: 10px;
+			margin-top: 10px;
+			@include textHide;
+			&.snsicn-twit{background: url(../img/snsicn-twit.png) 0 0px no-repeat;}
+			a.snsicn-twit{background: url(../img/snsicn-twit.png) 0 -30px no-repeat;@include transition(opacity 0.2s ease-in-out);&:hover{opacity:0;}
+			}/*----------a.snsicn-twit----------*/
+			&.snsicn-fb{background: url(../img/snsicn-fb.png) 0 0px no-repeat;}
+			a.snsicn-fb{background: url(../img/snsicn-fb.png) 0 -30px no-repeat;@include transition(opacity 0.2s ease-in-out);&:hover{opacity:0;}
+			}/*----------a.snsicn-fb----------*/
+			&.snsicn-ins{background: url(../img/snsicn-ins.png) 0 0px no-repeat;}
+			a.snsicn-ins{background: url(../img/snsicn-ins.png) 0 -30px no-repeat;@include transition(opacity 0.2s ease-in-out);&:hover{opacity:0;}
+			}/*----------a.snsicn-ins----------*/
+			&.snsicn-tumb{background: url(../img/snsicn-tumb.png) 0 0px no-repeat;}
+			a.snsicn-tumb{background: url(../img/snsicn-tumb.png) 0 -30px no-repeat;@include transition(opacity 0.2s ease-in-out);&:hover{opacity:0;}
+			}/*----------a.snsicn-tumb----------*/
+			&.snsicn-pts{background: url(../img/snsicn-pts.png) 0 0px no-repeat;}
+			a.snsicn-pts{background: url(../img/snsicn-pts.png) 0 -30px no-repeat;@include transition(opacity 0.2s ease-in-out);&:hover{opacity:0;}
+			}/*----------a.snsicn-pts----------*/
+			&.snsicn-rss{background: url(../img/snsicn-rss.png) 0 0px no-repeat;}
+			a.snsicn-rss{background: url(../img/snsicn-rss.png) 0 -30px no-repeat;@include transition(opacity 0.2s ease-in-out);&:hover{opacity:0;}
+			}/*----------a.snsicn_rss----------*/
+		}/*----------li----------*/
+	}/*----------.snsicn----------*/
+
+	.nojs{
+		@include clearfix;
+		background: #FFF;
+		padding: 20px 0;
+		p{
+			width: 470px;
+			margin: 0 auto;
+		}
+	}
+/*--------------------header--------------------*/
+
+

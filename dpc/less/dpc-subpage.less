@@ -1,0 +1,369 @@
+// ------------------------about------------------------
+	/* fontawesome web font */
+	@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+	.wrapper-about{
+		background: url(../img/top_bg1.jpg) repeat;
+	}
+
+	body{ 
+
+	}
+
+	.about{
+		padding-left: 1%;
+		padding-right: 1%;
+		@media (max-width: 1100px) {
+			padding-left: 6%;
+			padding-right: 6%;
+		}
+	}
+
+	.about img{
+		display: block;
+		float: left;
+		max-width: 100%;
+		height: auto;
+			@media (max-width: @screen-xxs-max) {
+				float: none;
+				max-width: 50%;
+				height: auto;
+				margin: 0 auto;
+			}
+			@media (min-width: @screen-xs-min)  and (max-width: @screen-xs-max) {	
+				float: none;
+				max-width: 30%;
+				height: auto;
+				margin: 0 auto;
+			}
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+				float: none;
+				max-width: 30%;
+				height: auto;
+				margin: 0 auto;
+			}
+			@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+				float: left;
+				max-width: 70%;
+				height: auto;
+				margin-left: 1%;
+				margin-top: 6%;
+			}
+			@media (min-width: @screen-lg-min) {
+				float: left;
+				max-width: 100%;
+				height: auto;
+				margin-left: 1%;
+				margin-top: 6%;
+			}
+	}
+
+	.about .about-text{
+		display: block;
+		float: left;
+		width: 55%;
+			@media (max-width: @screen-xxs-max) {
+				float: none;
+				width: 100%;
+			}
+			@media (min-width: @screen-xs-min)  and (max-width: @screen-xs-max) {	
+				float: none;
+				width: 100%;
+			}
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+				float: none;
+				width: 100%;
+			}
+			@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+				float: left;
+				width: 50%;
+				margin-left: 6%;
+				font-size: 0.9em;
+			}
+			@media (min-width: @screen-lg-min) {
+				float: left;
+				width: 55%;
+				margin-left: 6%;
+			}
+			span{margin-left: 8%;}
+			p{
+				width: 95%;
+				margin-left: 8%;
+				line-height: 1.4;
+				&:first-letter{
+					font-size: 1.8em;
+				}
+			}
+			ul{
+				margin-left: 8%;
+				li{
+					font-size: 1.5em;
+					@media (max-width: @screen-xs-max) {
+					font-size: 1.2em;
+					}
+				}
+			}
+			h3:before,
+			 {
+				color: #ec845c; /* アイコンの色 */
+				content: "\f00c";
+				font-family: "FontAwesome",sans-serif;
+				margin-right: 5px; /* アイコン右マージン */
+			}
+	}
+
+	/* fontawesome */
+
+		.snsicn-sub{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			float: right;
+			a{text-decoration: none;}
+			li{
+				list-style: none;
+				float: left;
+			}
+		}
+
+		@media  (max-width: @screen-sm-max) {
+		.snsicn-sub{
+				float: none;
+				text-align:center;
+				ul{
+					 display:inline-block;
+				}
+			}
+		}
+
+	.footer-sub{
+		background:@dpc-color-primary !important;
+		width: 100%;
+		padding: 0;
+		@media  (min-height: 800px){
+			position: fixed;
+			bottom: 0;
+		}
+		@media  (max-width: @screen-sm-max){
+			text-align: center;
+			padding-top: 20px;
+		}
+		@media  (max-width: @screen-xs-max){
+			position: static;
+		}
+	}
+
+	.footer-sub small{
+		float: left;
+		padding-top: 37px;
+		@media  (max-width: @screen-sm-max){
+			padding: 0;
+			float: none;
+			font-size: 12px;
+		}
+	}
+// ------------------------about------------------------
+
+// ------------------------products------------------------
+	.wrapper-products{
+		background: url(../img/top_bg3.jpg) repeat;
+	}
+
+	.products-menu{
+		@media  (min-width: @screen-md-min){
+			margin-top: 2%;
+		}
+	}
+
+	/*  panel-box
+	/*--------------------------------- */
+	.wrapper-products .panel {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background: @dpc-color-quinary;
+		border: none;
+		-webkit-box-shadow: 0px 7px 1px -3px rgba(0,0,0,.3);
+		-moz-box-shadow: 0px 7px 1px -3px rgba(0,0,0,.3);
+		box-shadow: 0px 7px 1px -3px rgba(0,0,0,.3);
+	}
+
+	.wrapper-products .panel-body {
+		text-align: center;
+		height: 180px;
+		color: #888;
+		border: 1px solid #fff;
+		border-bottom: none;
+		-webkit-border-top-left-radius: 5px;
+		        border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		        border-top-right-radius: 5px;
+	}
+
+	.wrapper-products .panel-body a img{
+		opacity: 1;
+		webkit-transition: @transition;
+		transition: @transition;
+	}
+
+	.wrapper-products .panel-body a img:hover{
+		opacity: 0.7;
+		webkit-transition: @transition;
+		transition: @transition;
+	}
+
+	.wrapper-products .panel-footer {
+		padding: 0 !important;
+		text-align: center;
+		border-top: none;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		font-size: 1.2em;
+		font-weight: bold;
+		background-color: @dpc-color-quaternary;
+		 webkit-transition: @transition;
+		 transition: @transition;
+	}
+
+	.wrapper-products .panel-footer:hover{
+		background-color: @dpc-color-senary;
+		webkit-transition: @transition;
+		transition: @transition;
+	}
+
+	.wrapper-products .panel-footer a{
+		display: block;
+		padding: 8px 16px;
+		color:#fff;
+		webkit-transition: @transition;
+		transition: @transition;
+	}
+
+	.wrapper-products .panel-footer a:hover{
+		color:#fff;
+		webkit-transition: @transition;
+		transition: @transition;
+	}
+
+	.products .wresp{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 60px auto;
+	}
+
+	.products  .hresp{
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		margin: 0 auto;
+	}
+// ------------------------products------------------------
+
+// ------------------------blog------------------------
+// ------------------------blog------------------------
+
+// ------------------------company------------------------
+	.wrapper-company{
+		background: url(../img/top_bg2.jpg) repeat;
+	}
+
+	.company{
+		margin-bottom: 20px;
+	}
+
+	.company-info{
+		dl{
+			margin-left: 2%;
+
+		}
+		dt{
+			font-size: 1.3em;
+			color: @dpc-color-secondary;
+			font-weight: 100;
+		}
+		dt:before{
+			color: @dpc-color-secondary; /* アイコンの色 */
+			content:  "\f10c";
+			font-family: "FontAwesome",sans-serif;
+			margin-right: 5px; /* アイコン右マージン */
+		}
+		dd{
+			margin-left: 1.6em;
+			margin-bottom: 1em;
+		}
+	}
+
+	.google-maps {
+		position: relative;
+		padding-bottom: 85%; // これが縦横比
+		height: 0;
+		overflow: hidden;
+		small{
+			position: absolute;
+			left: 2%;
+			top: 0%;
+			a{color:#ec845c !important;}
+		}
+		@media  (max-width: @screen-sm-max){
+			padding-bottom: 50%;
+			
+		}
+	}
+	.google-maps iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+		@media  (max-width: @screen-sm-max){
+			width: 80% !important;
+			height: 80% !important;
+			margin-left: 10% !important;
+		}
+	}
+// ------------------------company------------------------
+
+// ------------------------contact------------------------
+	.wrapper-contact{
+		background: url(../img/top_bg5.jpg) repeat;
+	}
+
+
+	.wrapper-contact form{
+		@media (min-width: @screen-md-min){
+			float: left;
+			margin-left: 2%;
+		}
+	}
+
+	fieldset { border:none; width:320px;}
+	legend { font-size:18px; margin:0px; padding:10px 0px; color:#112a3e; font-weight:bold;}
+	label { display:block; margin:15px 0 5px;}
+	input[type=text], input[type=password] { width:300px; padding:5px; border:solid 1px #ccc;}
+	.prev, .next { background-color:#112a3e; padding:5px 10px; color:#fff; text-decoration:none; margin-top: 20px;}
+	.prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+	.prev { float:left;}
+	.next { float:right;}
+	#steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+	#steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3;}
+	#steps li span {font-size:11px; display:block;}
+	#steps li.current { color:#000;}
+	#makeWizard { background-color:#112a3e; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
+	#makeWizard:hover { background-color:#000;}
+	textarea {resize: none;}
+	@media (min-width: @screen-md-min){
+		#Confirm{float: right;}
+	}
+
+	.form-attention{
+		h2{
+			font-size: 1.5em;
+		}
+		padding-bottom: 5%;
+		@media (min-width: @screen-md-min){
+			float: right;
+			width: 50%;
+			margin-right: 5%;
+		}
+	}
+// ------------------------contact------------------------

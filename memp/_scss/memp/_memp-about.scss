@@ -1,0 +1,112 @@
+/*--------------------about--------------------*/
+	#about{
+		@include boxset-pc;
+		text-align: center;
+		line-height: 1.8;
+		@include mediaquery-tablet {
+			@include boxset-tab;
+		}
+		@include mediaquery-smartphone {
+			@include boxset-sm;
+		}
+		@include mediaquery-Xsmartphone {
+			@include boxset-Xsm;
+		}
+		h2{
+			font-size: 2em;
+			margin: 2% 0;
+			color: $memp-pcmc;
+			@include mediaquery-tablet {
+				color: $memp-tbmc;
+				padding:0 2em;
+			}
+			@include mediaquery-smartphone {
+				color: $memp-smmc;
+				font-size: 1.8em;
+			}
+			@include mediaquery-Xsmartphone {
+				color: $memp-xsmc;
+				font-size: 1.5em;
+			}
+		}
+		.inner{
+			p{
+				padding: 0 5em;
+				@include mediaquery-tablet {
+					padding: 0;
+				}
+				@include mediaquery-smartphone {
+					padding: 0;
+					font-size: 1.2em;
+				}
+				@include mediaquery-Xsmartphone {
+					padding: 0;
+					font-size: 1.2em;
+				}
+			}/*-----------p------------*/
+			.about-cap{margin-bottom: 2%;}
+			dl{
+				dt,dd{
+					display: inline;
+					@include mediaquery-smartphone {
+						font-size: 1.2em;
+					}
+					@include mediaquery-Xsmartphone {
+						padding: 0;
+						font-size: 1.2em;
+					}
+				}
+			}
+			.img-stage{
+				img{
+					@media only screen and (min-width:992px) {
+						float: none;
+					}
+				}
+			}/*-----------img-stage------------*/
+			.profile{
+				margin-top: 2%;
+				text-align: left;
+				@include mediaquery-smartphone {
+					text-align: center;
+				}
+				@include mediaquery-Xsmartphone {
+					text-align: center;
+				}
+				h3{
+					font-size: 2.5em;
+					color: $memp-pcmc;
+					@include mediaquery-tablet {
+						color: $memp-tbmc;
+					}
+					@include mediaquery-smartphone {
+						color: $memp-smmc;
+					}
+					@include mediaquery-Xsmartphone {
+						color: $memp-xsmc;
+						font-size: 1.7em;
+					}
+				}
+				ul{
+					margin-bottom: 1%;
+					padding-left: 2.5%;
+					li{
+						font-size: 1.3em;
+					}
+				}
+				a{
+					@include mediaquery-tablet {
+						font-size: 1.5em;
+					}
+					@include mediaquery-smartphone {
+						font-size: 1.5em;
+					}
+					@include mediaquery-Xsmartphone {
+						font-size: 1.3em;
+					}
+				}
+				p{padding: 0;margin-bottom: 1%;}
+			}
+		}/*-----------inner------------*/
+	}/*--------------------about--------------------*/
+

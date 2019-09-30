@@ -1,0 +1,50 @@
+/*--------------------footer(sns)--------------------*/
+	#sns{
+		@include boxset-pc;
+		text-align: center;
+		line-height: 1.8;
+		@include mediaquery-tablet {
+			@include boxset-tab;
+		}
+		@include mediaquery-smartphone {
+			@include boxset-sm;
+		}
+		@include mediaquery-Xsmartphone {
+			@include boxset-Xsm;
+		}
+		h2{
+			font-size: 2.5em;
+			margin: 1% 0;
+			color: $memp-pcmc;
+			@include mediaquery-tablet {
+				color: $memp-tbmc;
+				padding:0 2em;
+			}
+			@include mediaquery-smartphone {
+				color: $memp-smmc;
+				font-size: 2em;
+			}
+			@include mediaquery-Xsmartphone {
+				color: $memp-xsmc;
+				font-size: 1.5em;
+			}
+		}
+		.inner{
+			ul{
+				li{
+					font-size: 3em;
+					@include mediaquery-smartphone {
+						font-size: 2em;
+					}
+					@include mediaquery-Xsmartphone {
+						font-size: 2em;
+					}
+					a{
+						
+					}
+				}
+			}
+
+		}/*-----------inner------------*/
+	}/*--------------------footer(sns)--------------------*/
+

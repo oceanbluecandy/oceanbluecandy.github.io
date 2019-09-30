@@ -1,0 +1,58 @@
+/*--------------------gnav--------------------*/
+	#gnav{
+		position: fixed;
+		left: 3.5%;
+		top: 50%;
+		margin-top: -100px;
+		li{
+			margin-top: 15%;
+			a{ 
+				font-size: 1.7em;
+				z-index: 999;
+			}
+		}
+		@include mediaquery-tablet {
+			position: fixed;
+			left: 4%;
+			top: 50%;
+			margin-top: -100px;
+			li{
+				margin-top: 15%;
+				a{
+					font-size: 1.6em;
+					z-index: 999;
+				}
+			}
+		}
+		@include mediaquery-smartphone {
+			display: none;
+		}
+		@include mediaquery-Xsmartphone {
+			display: none;
+		}
+	}/*--------------------gnav--------------------*/
+	.simple-menu{
+		display: none;
+		@include mediaquery-smartphone {
+			display: inline;
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			top: 0;
+			right: 0;
+			background: url(../img/sm_menu.png) no-repeat;
+			@include textHide;
+			z-index: 9999;
+		}
+		@include mediaquery-Xsmartphone {
+			display: inline;
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			top: 0;
+			right: 0;
+			background: url(../img/sm_menu.png) no-repeat;
+			@include textHide;
+			z-index: 9999;
+		}
+	}

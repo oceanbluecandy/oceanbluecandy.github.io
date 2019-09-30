@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta name="description" lang="ja" content="あなたの音楽生活を応援します！高品質で低価格のGood for MUSICオンラインストア。楽器のお取り扱いはGoodForMusicオンラインストアにお任せください！※こちらは架空サイトになります。" />
+		<meta name="keywords" lang="ja" content="Good_for_MUSIC,グッフォー,楽器,初心者,低価格,高品質" />
+		<meta name="robots" content="noindex" />
+		<title>GoodForMUSIC | あなたの音楽生活を応援します！GoodForMusicオンラインストア ※こちらは架空サイトになります。</title>
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico"> 
+		<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<!--CSSへのリンク-->
+		<link href="css/reset.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/common.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/jquery.ps.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/tooltipster.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/tooltipster-punk.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/jquery.jgrowl.min.css" rel="stylesheet" type="text/css" media="all" />
+<!--/CSSへのリンク-->
+<!--JSへのリンク-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/top-script.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript" src="js/jquery.calendar.js"></script>
+		<script type="text/javascript" src="js/jquery.ps.min.js"></script>
+		<script type="text/javascript" src="js/jquery.psmw.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+		<script type="text/javascript" src="js/jquery.jgrowl.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+		  	$.jGrowl("このページでは<br /><span>・トップページ&nbsp;&nbsp;・新商品5点のページ&nbsp;&nbsp;・はじめての方</span><br />が、ご覧になれます。" ,{
+				sticky: true
+			});
+		});
+		</script>
+
+<!--/JSへのリンク-->
+</head>
+
+<body>
+	<div id="wrapper" class="clearfix">
+		<div class="top_wrap clearfix">
+			<div class="js_warning al-c m20-tb" id="jsOnDelete">
+				<p class="attention f18 fw7">
+					当サイトでは、複数のページでJavaScriptを利用しています。<br />
+					お使いのブラウザーでJavaScriptの設定が無効になっていると、<br />
+					レイアウトが崩れたり、ページ機能が限定される場合がございます。<br /><br />
+
+					以下の手順にて、JavaScriptを有効に設定してからご利用ください。<br />
+					お使いのOSとブラウザーに該当する項目をクリックしてご覧ください。<br />
+					<a href="http://www.yahoo-help.jp/app/noscript">JavaScriptの設定方法(Yahoo!Japan ヘルプセンター)</a>
+				</p>
+			</div>
+			<div class="header clearfix">
+				<div class="head_left fl">
+					<h1 class="ml20"><a href=""><img src="img/logo.png" height="64" width="326" alt="Good for MUSIC" /></a></h1>
+					<p class="f15 ml20 mt10">あなたの音楽生活を応援します！Good for MUSIC オンラインストア(架空サイト)</p>
+				</div><!--end /.head_left -->
+
+				<div class="head_right fr">
+					<ul class="login_area fr mt20 mr10 ">
+						<li><a href=""><img src="img/mypage_button.png" width="85" height="30" alt="" /></a></li>
+						<li><a href=""><img src="img/login_button.png" width="75" height="30" alt="ログイン" /></a></li>
+						<li class="cart_case"><a href="">0件</a></li>
+					</ul><!--end /.login_area -->
+					<p class="clb mr20 pt5 f15">ようこそ <a href=""><span class="attention_bl fw7">ゲスト</span></a> 様</p>
+					<form action="">
+						<ul class="search_area fr mt15 mr15">
+							<li>
+								<select name="category" id="search_category" >
+										<option value="all">全てのカテゴリー</option>
+										<option value="beginner">初心者セット</option>
+										<option value="guitar">ギター</option>
+										<option value="bass">ベース</option>
+										<option value="drums">ドラム</option>
+										<option value="keyboad">キーボード</option>
+										<option value="amp_effector">アンプ・エフェクター</option>
+										<option value="dtm">DTM</option>
+										<option value="accessory">各種アクセサリー</option>
+								</select></li>
+							<li><input id="search_text" type="text" onblur="if (this.value == '') 
+							{this.value = 'お探しの商品を検索！';}" onfocus="if (this.value == 'お探しの商品を検索！')
+							{this.value = '';}" value="お探しの商品を検索！" maxlength="70" size="23" name="search" class=""></input></li>
+							<li><input type="image" src="img/search_button.png" alt="検索" /></li>
+						</ul><!--end /.search_area -->
+					</form>
+				</div><!--end /.head_right -->
+			</div><!--end /.header -->
+
+			<ul class="gnav clearfix">
+				<li class="gnav_ho bod-l0"><a href="">ホーム</a></li>
+				<li class="gnav_sg"><a href="">サイトご案内</a></li>
+				<li class="gnav_bg"><a href="">ご購入ガイド</a></li>
+				<li class="gnav_sh"><a href="">お支払い・配送</a></li>
+				<li class="gnav_fq"><a href="">よくあるご質問</a></li>
+				<li class="bod-r0  gnav_su"><a href="">サポート</a></li>
+			</ul>
+			<!--end /.gnav -->
+
+			<div class="main mt15 mb30 clearfix">
+				<div class="content fr">
+
+					<div class="eyecatch_area clearfix ">
+						<ul class="eyecatch fl">
+							<li><a href=""><img src="img/eyecatch1.jpg" width="670" height="260" alt="2013winterアウトレットセール" title="2013Winter アウトレットセール開催中！ 今だけお得な商品が沢山揃ってます！" /></a></li>
+							<li><a href=""><img src="img/eyecatch2.jpg" width="670" height="260" alt="ビギナーズクーポンキャンペーン実施中" title="ビギナーズクーポンキャンペーン実施中！　これから楽器を始めたいあなたを応援します！" /></a></li>
+							<li><a href=""><img src="img/eyecatch3.jpg" width="670" height="260" alt="図解解説" title="図解解説によってあなたの不安や疑問を解決します！ 続々と更新中！" /></a></li>
+							<li><a href=""><img src="img/eyecatch4.jpg" width="670" height="260" alt="GFMオリジナル作曲コンテスト" title="第3回GFMオリジナル作曲コンテスト 初心者・経験者不問！あなたの楽曲を聴かせてください！" /></a></li>
+						</ul>
+						<ul class="sns_button fr mr10">
+							<li><a href="" class="sns_tips" title="Twitter"><img src="img/twit_btn.png" width="50" height="50" alt="Twitter" /></a></li>
+							<li><a href="" class="sns_tips" title="Facebook" ><img src="img/fb_btn.png" width="50" height="50" alt="Facebook" /></a></li>
+							<li><a href="" class="sns_tips" title="Youtube"><img src="img/ytb_btn.png" width="50" height="50" alt="Youtube" /></a></li>
+							<li><a href="" class="sns_tips" title="Instagram"><img src="img/ins_btn.png" width="50" height="50" alt="Instagram"  /></a></li>
+							<li><a href="" class="sns_tips" title="tumblr"><img src="img/tumb_btn.png" width="50" height="50" alt="tumblr" /> </a></li>
+						</ul>
+					</div><!-- /.eyecatch_area -->
+
+					<div class="news_area clearfix mt5 mb10">
+						<div class="news_content fl ml10">
+							<div class="news_heading_box">
+								<h2 class="disp-i">NEWS</h2>
+								<a href="" class="golist">一覧へ</a>
+							</div><!-- /.news_heading_box -->
+							<div class="news_box">
+							<dl class="pl5 clearfix">
+								<dt>2013/11/30</dt>
+								<dd><span class="new_btn mr10">New!</span><a href="">初心者のためのエフェクター購入基礎講座をアップしました。</a></dd>
+								<dt>2013/11/28</dt>
+								<dd><span class="new_btn mr10">New!</span><a href="">笛田くんと儀武くんのギター解説コーナー Vol.5をアップしました。</a></dd>
+								<dt>2013/11/26</dt>
+								<dd><a href="">ビギナーズクーポンフェスティバル開催中！</a></dd>
+								<dt>2013/11/25</dt>
+								<dd><a href="">GoodforMUSICの公式tumblrアカウントを開設しました。</a></dd>
+								<dt>2013/11/21</dt>
+								<dd><a href="">疲れた楽器をリフレッシュ！即効メンテ術ページをアップしました。</a></dd>
+								<dt>2013/11/19</dt>
+								<dd><a href="">波留ちゃんと狩野ちゃんのドラム解説コーナー Vol.2をアップしました。</a></dd>
+								<dt>2013/11/15</dt>
+								<dd><a href="">OverRevEffects新製品「RPM Drive」を入荷しました。</a></dd>
+								<dt>2013/11/12</dt>
+								<dd><a href="">お買い上げ3000円以上で送料0円キャンペーン実施中！ 1月7日まで！</a></dd>
+							</dl>
+							</div><!-- /.news_box -->
+						</div><!-- /.news_content -->
+						<div class=" fr mt5 mr10">
+							<ul class="news_bannar">
+								<li><a href=""><img src="img/news_bannar1.jpg" width="160" height="120" alt="お買い上げ3000円以上で送料0円キャンペーン" /></a></li>
+								<li><a href=""><img src="img/news_bannar2.jpg" width="160" height="120" alt="今だけOP-1がお得！" /></a></li>
+								<li><a href=""><img src="img/news_bannar3.jpg" width="160" height="120" alt="GFMフォトコンテスト開催中" /></a></li>
+							</ul>
+						</div><!-- /.news_bannar -->
+					</div><!-- /.news_area -->
+
+					<div class="special_area content_box mb20 ">
+						<div class="content_heading_box">
+							<h2 class="disp-i">特集記事・お得情報</h2>
+							<a href="" class="golist">一覧へ</a>
+						</div><!-- /.content_heading_box -->
+						<div class="content_box_inner clearfix">
+							<dl class="fl">
+								<dt><a href=""><img src="img/special_bannar1.jpg" width="150" height="90" alt="エフェクター購入講座" /></a></dt>
+								<dd class="al-c"><a href="">「楽器のエフェクターはどれから買えばいいの？」<br />そんなあなたにアドバイス！！</a><span class="new_btn mb5">New!</span></dd>
+							</dl>
+							<dl class="fl">
+								<dt><a href=""><img src="img/special_bannar2.jpg" width="150" height="90" alt="即効メンテ術" /></a></dt>
+								<dd class="al-c"><a href="">あなたの楽器は大丈夫？<br />簡単メンテナンス方法はこちらからどうぞ！</a><span class="new_btn mb5">New!</span></dd>
+							</dl>
+							<dl class="fl">
+								<dt><a href=""><img src="img/special_bannar3.jpg" width="150" height="90" alt="HowTo弾き語り" /></a></dt>
+								<dd class="al-c"><a href="">中級者を目指そう！<br />GFM流の弾き語り講座であなたも弾き語りデビュー！</a></dd>
+							</dl>
+							<dl class="fl">
+								<dt><a href=""><img src="img/special_bannar4.jpg" width="150" height="90" alt="エフェクター購入講座" /></a></dt>
+								<dd class="al-c"><a href="">ドラマー＆ベーシスト必見！<br />メトロノーム練習を取り入れてリズム感を身につけよう！</a></dd>
+							</dl>
+						</div><!-- /.content_box_inner -->
+						
+					</div><!-- /.special_area -->
+					<div class="newitem_area content_box mb20">
+						<div class="content_heading_box">
+							<h2 class="disp-i">新商品・入荷情報</h2>
+							<a href="" class="golist">一覧へ</a>
+						</div><!-- /.content_heading_box -->
+						<div class="content_box_inner clearfix">
+							<dl class="fl ml10">
+								<dt><a href="shop_contents/amp_effector/mxr_maplus.html"><img src="img/item/mxr-csp233.jpg" alt="" /></a></dt>
+								<dd class="al-c"><a href="shop_contents/amp_effector/mxr_maplus.html">MXR<br />MicroAmp+<br /><span class="price fw7">&yen;15,800(税込)</span></a></dd>
+							</dl>
+							<dl class="fl ml20">
+								<dt><a href="shop_contents/guitar/tlr52nls.html"><img src="img/item/TLR52-NLS.jpg" alt=""  /></a></dt>
+								<dd class="al-c"><a href="shop_contents/guitar/tlr52nls.html">FenderJapan<br />TLR52-NLS<br /><span class="price fw7">&yen;88,000(税込)</span></a></dd>
+							</dl>
+							<dl class="fl ml20">
+								<dt><a href="shop_contents/bass/ajb44_mh.html"><img src="img/item/to-ajb48.jpg" alt=""  /></a></dt>
+								<dd class="al-c"><a href="shop_contents/bass/ajb44_mh.html">Tokai <br />AJB44_MH<br /><span class="price fw7">&yen;32,200(税込)</span></a></dd>
+							</dl>
+							<dl class="fl ml20">
+								<dt><a href="shop_contents/drum/lns1455ews.html"><img src="img/item/LNS1455EWS.jpg" alt=""  /></a></dt>
+								<dd class="al-c"><a href="">YAMAHA <br />LNS1455EWS<br /><span class="price fw7">&yen;30,800(税込)</span></a></dd>
+							</dl>
+							<dl class="fl ml20">
+								<dt><a href="shop_contents/accessory/pbpro.html"><img src="img/item/pitchblack_pro.jpg" alt=""  /></a></dt>
+								<dd class="al-c"><a href="">KORG<br />Pitchblack Pro<br /><span class="price fw7">&yen;9,800(税込)</span></a></dd>
+							</dl>
+						</div><!-- /.content_box_inner -->
+						
+					</div><!-- /.newitem_area -->
+					<div class="ranking_area content_box mb20 clearfix">
+						<div class="content_heading_box">
+							<h2 class="disp-i">売れ筋ランキング</h2>
+							<a href="" class="golist">一覧へ</a>
+						</div><!-- /.content_heading_box -->
+						<div class="content_box_inner">
+							<ul class="rank_menu clearfix ">
+							    <li><a href="#tab1">初心者セット</a></li>
+							    <li><a href="#tab2">ギター</a></li>
+							    <li><a href="#tab3">ベース</a></li>
+							    <li><a href="#tab4">ドラム</a></li>
+							    <li><a href="#tab5">キーボード</a></li>
+							    <li><a href="#tab6">アンプ</a></li>
+							    <li><a href="#tab7">エフェクター</a></li>
+							    <li><a href="#tab8">DTM</a></li>
+							    <li><a href="#tab9">各種アクセサリー</a></li>
+							</ul>
+							<div class="rank_content clearfix mt30 oh">
+							<div class="rank_box" id="tab1">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/set_g.jpg" alt="エレキギター12点セット" /></a></dt>
+									<dd class="al-c mt5 "><a href="">GFMビギナーセレクト<br />エレキギター12点セット<br /><span class="attention fw7">&yen;20,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/set_b.jpg" alt="エレキベース12点セット" /></a></dt>
+									<dd class="al-c mt5"><a href="">GFMビギナーセレクト<br />エレキベース12点セット<br /><span class="attention fw7">&yen;21,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/set_k.jpg" alt="キーボード7点セット" /></a></dt>
+									<dd class="al-c mt5"><a href="">GFMビギナーセレクト<br />キーボード7点セット<br /><span class="attention fw7">&yen;80,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/set_ac.jpg" alt="アコースティックギター16点セット" /></a></dt>
+									<dd class="al-c mt5"><a href="">GFMビギナーセレクト<br />アコースティックギター16点セット<br /><span class="attention fw7">&yen;15,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/set_dtm.jpg" alt="DTM・ボカロセット" /></a></dt>
+									<dd class="al-c mt5"><a href="">GFMビギナーセレクト<br />DTM・ボカロセット<br /><span class="attention fw7">&yen;42,000(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab2">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/sq-ncv60st-lpbR.jpg" alt="New Classic Vibe Stratocaster 60s Lake Placid Blue" /></a></dt>
+									<dd class="al-c mt5"><a href="">Squier by Fender <br />New Classic Vibe Stratocaster 60s Lake Placid Blue<br /><span class="attention fw7">&yen;41,400(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/head-hec48-ana.jpg" alt="HEC-48" /></a></dt>
+									<dd class="al-c mt5"><a href="">HEADWAY<br />HEC-48<br /><span class="attention fw7">&yen;21,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/les_cus.jpg" alt="LIMITED MODEL Les Paul STUDIO Deluxe" /></a></dt>
+									<dd class="al-c mt5"><a href="">Epiphone<br />LIMITED MODEL Les Paul STUDIO Deluxe<br /><span class="attention fw7">&yen;32,500(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/ovt-cc48.jpg" alt="CC48" /></a></dt>
+									<dd class="al-c mt5"><a href="">Ovation<br />CC48<br /><span class="attention fw7">&yen;51,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/fj-tl71.jpg" alt="TL71/ASH" /></a></dt>
+									<dd class="al-c mt5"><a href="">Fender JAPAN<br />TL71/ASH<br /><span class="attention fw7">&yen;42,000(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab3">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/sq-vmjb-3csR.jpg" alt="Vintage Modified Jazz Bass [3-Color Sunburst/Rosewood]" /></a></dt>
+									<dd class="al-c mt5"><a href="">Squier by Fender<br />Vintage Modified Jazz Bass [3-Color Sunburst/Rosewood]<br /><span class="attention fw7">&yen;41,200(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/bac-bpb1r-wh.jpg" alt="BPB-1R" /></a></dt>
+									<dd class="al-c mt5"><a href="">Bacchus <br />BPB-1R<br /><span class="attention fw7">&yen;20,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/star_ray4.jpg" alt="Ray4 Black" /></a></dt>
+									<dd class="al-c mt5"><a href="">STERLING<br />Ray4 Black</a><br /><span class="attention fw7">&yen;29,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/yamaha_TRBX305.jpg" alt="TRBX305 VH" /></a></dt>
+									<dd class="al-c mt5"><a href="">YAMAHA<br />TRBX305 VH(5弦ベース)<br /><span class="attention fw7">&yen;39,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/Ibanez_GSR320 .jpg" alt="" /></a></dt>
+									<dd class="al-c mt5"><a href="">Ibanez<br />GSR320 PW<br /><span class="attention fw7">&yen;23,900(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab4">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/paiste_0652816a.jpg" alt="PST5 ROCK CRASH 18" /></a></dt>
+									<dd class="al-c mt5"><a href="">PAISTE <br />PST5 ROCK CRASH 18<br /><span class="attention fw7">&yen;11,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/SD6465.jpg" alt="SD6465" /></a></dt>
+									<dd class="al-c mt5"><a href="">YAHAMA<br />SD6465<br /><span class="attention fw7">&yen;34,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/sabian_sbr18crb.jpg" alt="SBR CRASH RIDE 18" /></a></dt>
+									<dd class="al-c mt5"><a href="">SABIAN <br />SBR CRASH RIDE 18"<br /><span class="attention fw7">&yen;7,200(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/pearl_p930a.jpg" alt="P930" /></a></dt>
+									<dd class="al-c mt5"><a href="">PEARL<br />P930<br /><span class="attention fw7">&yen;8,200(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/dw_2002b.jpg" alt="DW2002" /></a></dt>
+									<dd class="al-c mt5"><a href="">DW<br />2002<br /><span class="attention fw7">&yen;16,200(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab5">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/korg_mar1b.jpg" alt="microARRANGER" /></a></dt>
+									<dd class="al-c mt5"><a href="">KORG<br />microARRANGER<br /><span class="attention fw7">&yen;34,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/korg_microkorg.jpg" alt="microKORG" /></a></dt>
+									<dd class="al-c mt5"><a href="">KORG<br />microKORG<br /><span class="attention fw7">&yen;30,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/yamaha_mx61a.jpg" alt="MX61" /></a></dt>
+									<dd class="al-c mt5"><a href="">YAMAHA<br />MX61<br /><span class="attention fw7">&yen;68,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/roland_junodi.jpg" alt="JUNO-Di" /></a></dt>
+									<dd class="al-c mt5"><a href="">ROLAND<br />JUNO-Di<br /><span class="attention fw7">&yen;68,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/yamaha_mox6d.jpg" alt="MOX6" /></a></dt>
+									<dd class="al-c mt5"><a href="">YAMAHA<br />MOX6<br /><span class="attention fw7">&yen;69,800(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab6">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/vox_pathfinder10.jpg" alt="Pathfinder10" /></a></dt>
+									<dd class="al-c mt5"><a href="">VOX<br />Pathfinder10<br /><span class="attention fw7">&yen;5,480(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/vox_pfb10a.jpg" alt="Pathfinder Bass 10" /></a></dt>
+									<dd class="al-c mt5"><a href="">VOX<br />Pathfinder Bass 10<br /><span class="attention fw7">&yen;6,580(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/vox_apacd.jpg" alt="amPlug AC30" /></a></dt>
+									<dd class="al-c mt5"><a href="">VOX<br />amPlug AC30<br /><span class="attention fw7">&yen;3,150(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/vox_apbs.jpg" alt="amPlug BASS" /></a></dt>
+									<dd class="al-c mt5"><a href="">VOX<br />amPlug BASS<br /><span class="attention fw7">&yen;3,150(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/vox_apldd.jpg" alt="amPlug LEAD" /></a></dt>
+									<dd class="al-c mt5"><a href="">VOX<br />amPlug LEAD<br /><span class="attention fw7">&yen;3,150(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab7">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/boss_bd2b.jpg" alt="BD-2" /></a></dt>
+									<dd class="al-c mt5"><a href="">BOSS<br />BD-2 Blues Driver<br /><span class="attention fw7">&yen;8,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/ibanz_ts9b.jpg" alt="" /></a></dt>
+									<dd class="al-c mt5"><a href="">Ibanez<br />TS9 Tube Screamer<br /><span class="attention fw7">&yen;9,200(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/mxr_m169ab.jpg" alt="Carbon Copy Analog Delay" /></a></dt>
+									<dd class="al-c mt5"><a href="">MXR<br />Carbon Copy Analog Delay<br /><span class="attention fw7">&yen;15,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/zoom_g3x.jpg" alt="G3X" /></a></dt>
+									<dd class="al-c mt5"><a href="">ZOOM<br />G3X<br /><span class="attention fw7">&yen;17,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/arion_schzd.jpg" alt="SCH-Z" /></a></dt>
+									<dd class="al-c mt5"><a href="">ARION<br />SCH-Z<br /><span class="attention fw7">&yen;3,500(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab8">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/stein_cubaseart7rb.jpg" alt="Cubase Artist 7" /></a></dt>
+									<dd class="al-c mt5"><a href="">STEINBERG<br />Cubase Artist 7<br /><span class="attention fw7">&yen;39,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/stein_cubaseart7rp.jpg" alt="Cubase Artist 7 Recording Pack" /></a></dt>
+									<dd class="al-c mt5"><a href="">STEINBERG<br />Cubase Artist 7 Recording Pack<br /><span class="attention fw7">&yen;59,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/cakewalk_cwsx2quada.jpg" alt="SONAR X2 POWER STUDIO QUAD" /></a></dt>
+									<dd class="al-c mt5"><a href="">CAKEWALK<br />SONAR X2 POWER STUDIO QUAD<br /><span class="attention fw7">&yen;54,800(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/crypton_39390b.jpg" alt="初音ミク V3" /></a></dt>
+									<dd class="al-c mt5"><a href="">CRYPTON<br />初音ミク V3<br /><span class="attention fw7">&yen;16,000(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/yamaha_msp3.jpg" alt="MSP3" /></a></dt>
+									<dd class="al-c mt5"><a href="">YAMAHA<br />MSP3<br /><span class="attention fw7">&yen;12,000(税込)</span></a></dd>
+								</dl>
+							</div>
+							<div class="rank_box" id="tab9">
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/pitchblack.jpg" alt="AW-3G" /></a></dt>
+									<dd class="al-c mt5"><a href="">KORG<br />pitchhawk-G AW-3G<br /><span class="attention fw7">&yen;2,200(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/dadario_reg.jpg" alt="" /></a></dt>
+									<dd class="al-c mt5"><a href="">D'Addario ダダリオ<br />エレキギター弦 .010-.046 3パック<br /><span class="attention fw7">&yen;1,200(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/korg_tun.jpg" alt="" /></a></dt>
+									<dd class="al-c mt5"><a href="">KORG<br />コンパクト・チューナー GA-1<br /><span class="attention fw7">&yen;660(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/canare_3m.jpg" alt="" /></a></dt>
+									<dd class="al-c mt5"><a href="">CANARE<br /> PROFESSIONAL CABLE G03(3m)<br /><span class="attention fw7">&yen;1,700(税込)</span></a></dd>
+								</dl>
+								<dl class="fl">
+									<dt><a href=""><img src="img/item/GS414B.jpg" alt="" /></a></dt>
+									<dd class="al-c mt5"><a href="">HERCULES <br />シングル・ギタースタンドGS414B<br /><span class="attention fw7">&yen;2,680(税込)</span></a></dd>
+								</dl>
+							</div>
+							</div><!-- rank_content end -->
+							<div class="rank_numbers">
+								<span class="rank_1"><img src="img/rank_1.png" width="20" height="20" alt="1" /></span>
+								<span class="rank_2"><img src="img/rank_2.png" width="20" height="20" alt="2" /></span>
+								<span class="rank_3"><img src="img/rank_3.png" width="20" height="20" alt="3" /></span>
+								<span class="rank_4"><img src="img/rank_4.png" width="20" height="20" alt="4" /></span>
+								<span class="rank_5"><img src="img/rank_5.png" width="20" height="20" alt="5" /></span>
+							</div><!-- /.rank_numbers -->
+						</div><!-- /.content_box_inner -->
+
+					</div><!-- /.ranking_area -->
+					<div class="standardbrand_area content_box clearfix">
+						<div class="content_heading_box">
+							<h2 class="disp-i">GFM定番のブランド</h2>
+							<a href="" class="golist">一覧へ</a>
+						</div><!-- /.content_heading_box -->
+						<div class="content_box_inner">
+							<ul class="mt5">
+								<li><a href=""><img src="img/item/fender.jpg" alt="Fender" /></a></li>
+								<li><a href=""><img src="img/item/squier.jpg" alt="Squier" /></a></li>
+								<li><a href=""><img src="img/item/gibson.jpg" alt="Gibson" /></a></li>
+								<li><a href=""><img src="img/item/epiphone.jpg" alt="Epiphone" /></a></li>
+								<li><a href=""><img src="img/item/peral.jpg" alt="Peral" /></a></li>
+							</ul>
+							<ul>
+								<li><a href=""><img src="img/item/boss.jpg" alt="Boss" /></a></li>
+								<li><a href=""><img src="img/item/yamaha.jpg" alt="Yamaha" /></a></li>
+								<li><a href=""><img src="img/item/korg.jpg" alt="KORG" /></a></li>
+								<li><a href=""><img src="img/item/dunlop.jpg" alt="JimDunlop" /></a></li>
+								<li><a href=""><img src="img/item/ore.jpg" alt="OverRevEffects" /></a></li>
+							</ul>
+						</div><!-- /.content_box_inner -->
+
+					</div><!-- /.standardbrand_area -->
+
+				</div><!-- /.content -->
+
+				<div class="sidebar fl">
+					<ul class="side_entry">
+						<li class="mb5"><a href="infomation/first.html"><img src="img/side_entry_bnr1.gif" alt="はじめての方" /></a></li>
+						<li class="mb15"><a href=""><img src="img/side_entry_bnr2.gif" alt="新規会員登録" /></a></li>
+					</ul>
+
+					<ul class="side_menu">
+						<li><a href="" class="sm_bset">初心者セット</a></li>
+						<li><a href=""class="sm_guitar">ギター</a></li>
+						<li><a href=""class="sm_base">ベース</a></li>
+						<li><a href="" class="sm_drum">ドラム</a></li>
+						<li><a href="" class="sm_key">キーボード</a></li>
+						<li><a href="" class="sm_amp">アンプ<br/>エフェクター</a></li>
+						<li><a href="" class="sm_dtm">DTM</a></li>
+						<li class="bod-b0"><a href="" class="sm_acc">各種<br/>アクセサリー</a></li>
+					</ul>
+
+					<div class="blog_parts mt20">
+						<h2><a href="">商品担当ブログ<br/>随時更新中！！</a></h2>
+						<ul>
+							<li><a href="">2013/11/30<br/>ギター担当の裏話<br/>
+								vol.2 初心者セットへのこだわり</a></li>
+						</ul>
+						<ul>
+							<li><a href="">2013/11/29<br/>
+							ドラム担当のワンポイント<br/>アドバイスvol.5 メンテナンス</a></li>
+						</ul>
+						<ul>
+							<li><a href="">2013/11/27<br/>
+							キーボード担当の裏話<br/>vol.3 メーカーごとの特徴</a></li>
+						</ul>
+					</div><!-- /.blog_ parts-->
+		
+					<div class="side_callender mt20">
+						<div id="calendar"></div>
+						<ul>
+							<li class="bod-t0 bod-b0">営業時間10:00～18:00</li>
+							<li class="sc_sat_att">15:00まで営業・出荷</li>
+							<li class="sc_sun_att bod-b0">定休日・祝祭日(午前出荷)</li>
+						</ul>
+					</div><!-- /.side_callender -->
+					
+				</div><!-- /.sidebar -->
+			</div><!-- /.main -->
+			
+		</div><!-- /.top_wrap -->
+
+
+				<!-- go to top -->
+					<div class="gototop">
+						<a href="#wrapper"><img src="img/pgtop_btn.png" width="50" height="50" alt="トップへ" /></a>
+					</div>
+				<!-- go to top end-->
+
+				<div class="shopinfo_area clearfix">
+					<div class="shopinfo_inner clearfix">
+						<h2>ショップご利用ガイド</h2>
+						<div class="shopinfo_box ml20">
+							<h3 class="si_ship"><img src="img/spi_ship.png" width="260" height="40" alt="" /></h3>
+						<div class="shopinfo_box_content">
+							<div class="shopinfo_ch clearfix">
+								<h4><span class="dots">.</span>
+									在庫ありの場合
+								</h4>
+								<a href="" class="si_ship_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22 f15"><span class="attention f18 fw7">2営業日以内</span>に出荷<span class="f12 cap_txt">(一部支払除く)</span></p>
+
+							<div class="shopinfo_ch clearfix">
+								<h4><span class="dots">.</span>
+									在庫なしの場合
+								</h4>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22"><span class="attention f18 fw7">5営業日以内</span>に出荷<br /><span class="f12 cap_txt">(メーカー品切れの場合を除く)</span></p>
+
+							<div class="shopinfo_ch clearfix mt10">
+								<h4><span class="dots">.</span>
+									配送日時指定
+								</h4>
+								<a href="" class="si_ship_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<img src="img/shp_time.png" width="240" height="45" alt="配送時間指定" class="al-c mt5" />
+							<p class="al-c">曜日指定：指定なし・平日・日曜・土日祝<br />配送希望日：ご注文日より5日以降の日付からご指定頂けます</p>
+						</div><!-- /.shopinfo_box_content -->
+						</div><!-- /.shopinfo_box -->
+
+						<div class="shopinfo_box ml10 mr10">
+							<h3 class="si_pay"><img src="img/spi_pay.png" width="260" height="40" alt="" /></h3>
+						<div class="shopinfo_box_content">
+								<div class="shopinfo_ch clearfix">
+									<h4><span class="dots">.</span>
+											お支払い方法
+									</h4>
+									<a href="" class="si_pay_a">詳しくはこちら</a>
+								</div><!-- /.shopinfo_ch-->
+								<p class="ind22 mt5"><span class="attention f18 fw7">クレジットカード・代金引換<br />銀行振込・コンビニ決済</span></p>
+								<img src="img/card.jpg" width="256" height="30" alt="クレジットカード" />
+								<p class="cap_txt">(代引支払いは代引手数料315円(税込)が発生致します。
+									また、銀行振込時の手数料はお客様負担となりますため、予めご了承くださいませ。)</p>
+
+								<div class="shopinfo_ch clearfix mt15">
+									<h4><span class="dots">.</span>
+										送料
+									</h4>
+									<a href="" class="si_pay_a">詳しくはこちら</a>
+								</div><!-- /.shopinfo_ch -->
+								<p class="ind22 f15 mt5">ご購入<span class="attention fw7 f18">6000円以上</span>(税込)で<span class="attention  fw7 f18">無料</span></p>
+								<p class="al-c cap_txt">通常送料：全国一律525円(税込)</p>
+						</div><!-- /.shopinfo_box_content -->
+						</div><!-- /.shopinfo_box -->
+
+
+						<div class="shopinfo_box">
+							<h3 class="si_service"><img src="img/spi_service.png" width="260" height="40" alt="" /></h3>
+						<div class="shopinfo_box_content">
+							<div class="shopinfo_ch clearfix">
+								<h4><span class="dots">.</span>
+									ポイントサービス
+								</h4>
+								<a href="" class="si_service_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22 mt5"><span class="attention f18 fw7">1ポイント＝100円</span>でご利用可能。</p>
+
+							<div class="shopinfo_ch clearfix mt20">
+								<h4><span class="dots">.</span>
+									レビュアーサービス
+								</h4>
+								<a href="" class="si_service_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22 mt5">ご購入後に商品のレビューをして頂くと<br />毎月抽選で<span class="attention f18 fw7">プレゼントが当たる！</span></p>
+
+							<div class="shopinfo_ch clearfix mt20">
+								<h4><span class="dots">.</span>
+									ギフト包装サービス
+								</h4>
+								<a href="" class="si_service_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22">ギフト向けの包装が<span class="attention f18 fw7">無料！</span></p>
+							<p class="ind22 cap_txt">(大きさや重さによって包装不可の場合がございます。事前にお問い合わせくださいませ。)</p>
+						</div><!-- /.shopinfo_box_content -->
+						</div><!-- /.shopinfo_box -->
+					</div><!-- /.shopinfo_inner -->
+				</div><!-- /.shopinfo_area -->
+
+				<div class="footer clearfix  p20-tb">
+					<div class="foot_inner clearfix">
+						<div class="foot_box ml10 ">
+							<h4><img src="img/foot_logo.png" width="210" height="41" alt="Good for MUSIC" />	</h3>
+							<ul class="mt5">
+								<li>（株）グッドフォーミュージック</li>
+								<li>〒192-00XX 東京都八王子市OOXX1-2-34</li>
+								<li>TEL: 042-XXX-YYY FAX:042-AAA-BBB</li>
+								<li>E-mail:info@gfmusic.co.jp</li>
+								<li>営業時間：10時～18時 定休日：土日祝</li>
+								<li><small>&copy; 2013 Good for MUSIC, Inc.</small></li>
+							</ul>
+						</div><!-- /.foot_box -->
+						<div class="foot_box ml10">
+							<h4 class="mt5">ご案内・SNS</h4>
+							<div class="foot_box_inner m1"><ul class="fl">
+									<li><a href="">はじめての方へ</a></li>
+									<li><a href="">サイトのご案内</a></li>
+									<li><a href="">ご購入ガイド</a></li>
+									<li><a href="">お支払い,配送</a></li>
+									<li><a href="">よくあるご質問</a></li>
+									<li><a href="">サポート</a></li>
+								</ul>
+								<ul class="foot_sns fl">
+									<li><a href="">Twitter</a></li>
+									<li><a href="">Facebook</a></li>
+									<li><a href="">Youtube</a></li>
+									<li><a href="">Instagram</a></li>
+									<li><a href="">Tumblr</a></li>
+								</ul>
+							</div><!-- /.foot_box_inner -->
+						</div><!-- /.foot_box -->
+						<div class="foot_box ml10">
+							<h4 class="mt5">商品カテゴリ	</h4>
+						<div class="foot_box_inner m2"><ul class="fl">
+								<li><a href="">初心者セット</a></li>
+								<li><a href="">新製品</a></li>
+								<li><a href="">ギター</a></li>
+								<li><a href="">ベース</a></li>
+								<li><a href="">ドラム</a></li>
+								<li><a href="">キーボード</a></li>
+							</ul>
+							<ul class="fl ml20">
+								<li><a href="">DTM</a></li>
+								<li><a href="">各種アクセサリー</a></li>
+							</ul>
+							</div><!-- /.foot_box_inner -->
+						</div><!-- /.foot_box -->
+						<div class="foot_box">
+							<h4 class="mt5">会員メニュー</h4>
+							<div class="foot_box_inner m3">
+							<ul class="">
+								<li><a href="">新規会員登録</a></li><a href=""></a>
+								<li><a href="">ログイン</a></li>
+								<li><a href="">マイページ</a></li>
+								<li><a href="">各種クーポン</a></li>
+								<li><a href="">キャンペーン一覧</a></li>
+								<li><a href="">お得なサービス</a></li>
+							</ul>
+							</div><!-- /.foot_box_inner -->
+						</div><!-- /.foot_box -->
+					</div><!-- /.foot_inner -->
+				</div><!-- /.footer -->
+
+	</div><!--end /#wrapper -->
+</body>
+
+</html>

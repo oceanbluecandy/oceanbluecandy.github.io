@@ -1,0 +1,110 @@
+/*--------------------ticket--------------------*/
+	#ticket{
+		@include boxset-pc;
+		text-align: center;
+		line-height: 1.8;
+		@include mediaquery-tablet {
+			@include boxset-tab;
+		}
+		@include mediaquery-smartphone {
+			@include boxset-sm;
+		}
+		@include mediaquery-Xsmartphone {
+			@include boxset-Xsm;
+		}
+		h2{
+			font-size: 2.5em;
+			margin-bottom: 1.5%;
+			color: $memp-pcmc;
+			@include mediaquery-tablet {
+				color: $memp-tbmc;
+				padding:0 2em;
+			}
+			@include mediaquery-smartphone {
+				color: $memp-smmc;
+			}
+			@include mediaquery-Xsmartphone {
+				color: $memp-xsmc;
+			}
+		}
+		.inner{
+			ol{
+				li{
+					margin: 2% 0;
+					h3{
+						font-size: 1.8em;
+					}
+				}
+			}/*-----------ol------------*/
+			p{
+				padding: 0 5em;
+				@include mediaquery-tablet {
+					padding: 0;
+				}
+				@include mediaquery-smartphone {
+					padding: 0;
+					font-size: 1.2em;
+				}
+				@include mediaquery-Xsmartphone {
+					padding: 0;
+					font-size: 1.2em;
+				}
+			}/*-----------p------------*/
+			table {
+				border-collapse: collapse;
+				width:100%;
+				font-size: 1.4em;
+				th {
+					border-right: #ccc 2px dashed;
+					border-bottom: #ccc 2px dashed;
+					padding: 2% 1%;
+					text-align: center;
+				}
+				td {
+					border-right: #ccc 2px dashed;
+					border-bottom: #ccc 2px dashed;
+					padding: 2%;
+					text-align: center;
+					a{
+						display: block;
+					}
+					&.sot a{
+					    color: #e74c3c;
+					}
+					&.sli a{
+					    color: #e67e22;
+					}
+					&.smo a{
+					    color: #3498db;
+					}
+				}
+			}/*-----------table------------*/
+			h3{font-size: 1.8em;margin-top: 2%;}
+			ul{
+				text-align: left;
+				list-style-type: disc;
+				padding: 0 12%;
+				@include mediaquery-tablet {
+					padding: 0 4%;
+				}
+				@include mediaquery-smartphone {
+					padding: 0 6%;
+				}
+				@include mediaquery-Xsmartphone {
+					padding: 0 8%;
+				}
+				li{
+					color: #666;
+					@include mediaquery-tablet {
+					}
+					@include mediaquery-smartphone {
+						font-size: 0.9em;
+					}
+					@include mediaquery-Xsmartphone {
+						font-size: 0.8em;
+					}
+				}
+			}
+		}/*-----------inner------------*/
+	}/*--------------------ticket--------------------*/
+

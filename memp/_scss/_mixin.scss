@@ -1,0 +1,112 @@
+// Clearfix
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+
+// Text Replace
+@mixin textHide {
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	
+	a {
+	  display: block;
+	  height: 100%;
+		width: 100%;
+	}
+}
+
+
+// Mouseover Animation
+@mixin hoverEffect($speed:300ms, $opacity:0.7) {
+	@include transition-duration($speed);
+	@include transition-property(opacity);
+	
+	&:hover {
+		@include opacity($opacity);
+	}
+}
+
+
+// Gradation
+@mixin gradient($direction:'top', $lighten:'lighten', $color:$color-link, $percent:10%) {
+  background-color: $color;
+  
+  @if $direction == top {
+    @if $lighten == lighten {
+      @include background-image(linear-gradient(lighten($color, $percent), $color));
+    }
+    @else if $lighten == darken {
+      @include background-image(linear-gradient(darken($color, $percent), $color));
+    }
+  }
+  @else if $direction == bottom {
+    @if $lighten == lighten {
+      @include background-image(linear-gradient($color, lighten($color, $percent)));
+    }
+    @else if $lighten == darken {
+      @include background-image(linear-gradient($color, darken($color, $percent)));
+    }
+  }
+}
+
+
+// Media Queries
+@mixin mediaquery-pc {
+  @media only screen and (min-width: $width-pc + 20) {
+    @content;
+  }
+}
+
+@mixin mediaquery-tablet {
+  @media only screen and (min-width: $width-tablet + 20) and (max-width: $width-pc + 20 - 1) {
+    @content;
+  }
+}
+
+@mixin mediaquery-smartphone {
+  @media only screen and (min-width: $width-smartphone + 20)  and (max-width: $width-tablet + 20 - 1) {
+    @content;
+  }
+}
+
+@mixin mediaquery-Xsmartphone {
+  @media only screen and (max-width: $width-smartphone + 20 - 1) {
+    @content;
+  }
+}
+
+
+// Inline Block;
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline; /* IE7 */
+  *zoom: 1; /* IE7 */
+}
+
+
+@mixin boxset-pc {
+  padding-bottom: 75%;
+  padding-top: 5%;
+}
+
+@mixin boxset-tab {
+  padding-bottom: 95%;
+  padding-top: 8%;
+}
+
+@mixin boxset-sm {
+  padding-bottom: 100%;
+  padding-top: 10%;
+}
+
+@mixin boxset-Xsm {
+  padding-bottom: 150%;
+  padding-top: 15%;
+}

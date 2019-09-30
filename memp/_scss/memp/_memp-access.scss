@@ -1,0 +1,72 @@
+/*--------------------access--------------------*/
+	#access{
+		@include boxset-pc;
+		text-align: center;
+		line-height: 1.8;
+		@include mediaquery-tablet {
+			@include boxset-tab;
+
+		}
+		@include mediaquery-smartphone {
+			@include boxset-sm;
+		}
+		@include mediaquery-Xsmartphone {
+			@include boxset-Xsm;
+		}
+		h2{
+			font-size: 2.5em;
+			margin: 1% 0;
+			color: $memp-pcmc;
+			@include mediaquery-tablet {
+				color: $memp-tbmc;
+				padding:0 2em;
+			}
+			@include mediaquery-smartphone {
+				color: $memp-smmc;
+			}
+			@include mediaquery-Xsmartphone {
+				color: $memp-xsmc;
+			}
+		}
+		.inner{
+			p{
+				padding: 0 5em;
+
+				@include mediaquery-tablet {
+					padding: 0;
+				}
+				@include mediaquery-smartphone {
+					padding: 0;
+					font-size: 1.2em;
+				}
+				@include mediaquery-Xsmartphone {
+					padding: 0;
+					font-size: 1.2em;
+				}
+			}/*-----------p------------*/
+			.google-maps {
+				position: relative;
+				padding-bottom: 50%; // これが縦横比
+				height: 0;
+				overflow: hidden;
+				margin-bottom: 4%;
+				@include mediaquery-tablet {
+					padding-bottom: 60%; // これが縦横比
+				}
+				@include mediaquery-smartphone {
+					padding-bottom: 70%; // これが縦横比
+				}
+				@include mediaquery-Xsmartphone {
+					padding-bottom: 80%; // これが縦横比
+				}
+			}
+			.google-maps iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100% !important;
+				height: 100% !important;
+			}
+		}/*-----------inner------------*/
+	}/*--------------------access--------------------*/
+

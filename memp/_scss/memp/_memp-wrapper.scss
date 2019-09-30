@@ -1,0 +1,22 @@
+	#container{
+		position: relative;
+		z-index: 999;
+		width: 100%;
+	}
+
+	#wrapper{
+		width: 72%;
+		margin: 0 auto 5% auto;
+		margin-left: 18%;
+		@include mediaquery-tablet {
+		margin-left: 21%;
+		}
+		@include mediaquery-smartphone {
+			width: 85%;
+			margin-left: auto;
+		}
+		@include mediaquery-Xsmartphone {
+			width: 75%;
+			margin-left: auto;
+		}
+	}

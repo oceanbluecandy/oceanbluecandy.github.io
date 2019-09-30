@@ -1,0 +1,162 @@
+// Common
+* {
+	@include box-sizing(border-box);
+}
+
+// color
+$memp-pcmc:#40AAEF;
+$memp-tbmc:#FF396F;
+$memp-smmc:#F7724D;
+$memp-xsmc:#58BE89;
+
+
+body {
+	background: $bgColor;
+	color: $color;
+	font-family: $font;
+	font-size: 12px;
+	height: 100%;
+	-webkit-text-stroke: 0.5px;
+	@-moz-document url-prefix() {
+		font-weight: 700;
+	}
+	
+	// Text Highlight
+	::selection {
+		background: $color-link;
+		color: $color-inverse;
+	}
+}
+
+a {
+	@include mediaquery-pc {
+		color:$memp-pcmc;
+	}
+	@include mediaquery-tablet {
+		color:$memp-tbmc;
+	}
+	@include mediaquery-smartphone {
+		color:$memp-smmc;
+	}
+	@include mediaquery-Xsmartphone {
+		color:$memp-xsmc;
+	}
+	cursor: pointer;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: underline;
+		@include mediaquery-pc {
+			color:lighten($memp-pcmc, 20%);
+		}
+		@include mediaquery-smartphone {
+			color:lighten($memp-tbmc, 20%);
+		}
+		@include mediaquery-smartphone {
+			color:lighten($memp-smmc, 20%);
+		}
+		@include mediaquery-Xsmartphone {
+			color:lighten($memp-xsmc, 20%);
+		}
+	}
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// for CSS Reset
+	// font-weight: bold;
+
+}
+ul{
+	list-style-type: none;
+}
+img{
+	vertical-align:bottom; 
+}
+
+
+/*-- shot cuts --*/
+	.fl{  float: left;}
+	.fr{float: right;}
+	.clb{clear: both;}
+
+	.tal{text-align:left;}
+	.tac{text-align:center;}
+	.tar{text-align:right;}
+
+	.inline{display: inline !important;}
+	.block{display: block !important;}
+	.inblock{display: inline-block !important;}
+	.distable{display: table;}
+	.distbc{display: table-cell;}
+	.fwb{font-weight: 700;}
+		
+	.clearfix:after {
+		content: " ";  
+		display: block; 
+		visibility: hidden; 
+		clear: both; 
+		height: 0.1px; 
+		font-size: 0.1em; 
+		line-height: 0; 
+}
+
+.clearfix {
+	min-height: 1px;
+}
+
+* html .clearfix {
+	height: 1px;
+	/**//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+// Common
+
+section h1{
+	text-align: center;
+	font-size: 4em;
+}
+
+.arrow{
+	clear: both;
+	@include textHide;
+	a{
+		margin: 2.5% auto 0 auto;
+		width: 48px;
+		height: 48px;
+		background: url(../img/arrow.png) center center no-repeat;
+		@include transition(background .2s);
+		&:hover{
+			@include transition(background .2s);
+			background: url(../img/arrow-on.png) center center no-repeat;
+		}
+	}
+}/*----------arrow----------*/
+
+.arrow-up{
+	clear: both;
+	@include textHide;
+	a{
+		margin: 2.5% auto 0 auto;
+		width: 48px;
+		height: 48px;
+		background: url(../img/arrow-up.png) center center no-repeat;
+		@include transition(background .2s);
+		&:hover{
+			@include transition(background .2s);
+			background: url(../img/arrow-up-on.png) center center no-repeat;
+		}
+	}
+}/*----------arrow----------*/

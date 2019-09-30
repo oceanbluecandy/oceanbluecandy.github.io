@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta name="description" lang="ja" content="あなたの音楽生活を応援します！高品質で低価格のGood for MUSICオンラインストア。楽器のお取り扱いはGoodForMusicオンラインストアにお任せください！※こちらは架空サイトになります。" />
+		<meta name="keywords" lang="ja" content="Good_for_MUSIC,グッフォー,楽器,初心者,低価格,高品質" />
+		<meta name="robots" content="noindex" />
+		<title>GoodForMUSIC | あなたの音楽生活を応援します！GoodForMusicオンラインストア ※こちらは架空サイトになります。</title>
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico"> 
+		<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<!--CSSへのリンク-->
+		<link href="../css/reset.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../css/common.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../css/jquery.bxslider.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../css/jquery.ps.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../css/tooltipster.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../css/tooltipster-punk.css" rel="stylesheet" type="text/css" media="all" />
+<!--/CSSへのリンク-->
+<!--JSへのリンク-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.calendar.js"></script>
+		<script type="text/javascript" src="../js/jquery.ps.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.psmw.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.tooltipster.min.js"></script>
+
+<!--/JSへのリンク-->
+</head>
+
+<body>
+	<div id="wrapper" class="clearfix">
+		<div class="top_wrap clearfix">
+			<div class="js_warning al-c m20-tb" id="jsOnDelete">
+				<p class="attention f18 fw7">
+					当サイトでは、複数のページでJavaScriptを利用しています。<br />
+					お使いのブラウザーでJavaScriptの設定が無効になっていると、<br />
+					レイアウトが崩れたり、ページ機能が限定される場合がございます。<br /><br />
+
+					以下の手順にて、JavaScriptを有効に設定してからご利用ください。<br />
+					お使いのOSとブラウザーに該当する項目をクリックしてご覧ください。<br />
+					<a href="http://www.yahoo-help.jp/app/noscript">JavaScriptの設定方法(Yahoo!Japan ヘルプセンター)</a>
+				</p>
+			</div>
+			<div class="header clearfix">
+				<div class="head_left fl">
+					<h1 class="ml20"><a href="../index.html"><img src="../img/logo.png" height="64" width="326" alt="Good for MUSIC" /></a></h1>
+					<p class="f15 ml20 mt10">あなたの音楽生活を応援します！Good for MUSIC オンラインストア(架空サイト)</p>
+				</div><!--end /.head_left -->
+
+				<div class="head_right fr">
+					<ul class="login_area fr mt20 mr10 ">
+						<li><a href=""><img src="../img/mypage_button.png" width="85" height="30" alt="" /></a></li>
+						<li><a href=""><img src="../img/login_button.png" width="75" height="30" alt="ログイン" /></a></li>
+						<li class="cart_case"><a href="">0件</a></li>
+					</ul><!--end /.login_area -->
+					<p class="clb mr20 pt5 f15">ようこそ <a href=""><span class="attention_bl fw7">ゲスト</span></a> 様</p>
+					<form action="">
+						<ul class="search_area fr mt15 mr15">
+							<li>
+								<select name="category" id="search_category" >
+										<option value="all">全てのカテゴリー</option>
+										<option value="beginner">初心者セット</option>
+										<option value="guitar">ギター</option>
+										<option value="bass">ベース</option>
+										<option value="drums">ドラム</option>
+										<option value="keyboad">キーボード</option>
+										<option value="amp_effector">アンプ・エフェクター</option>
+										<option value="dtm">DTM</option>
+										<option value="accessory">各種アクセサリー</option>
+								</select></li>
+							<li><input id="search_text" type="text" onblur="if (this.value == '') 
+							{this.value = 'お探しの商品を検索！';}" onfocus="if (this.value == 'お探しの商品を検索！')
+							{this.value = '';}" value="お探しの商品を検索！" maxlength="70" size="23" name="search" class=""></input></li>
+							<li><input type="image" src="img/search_button.png" alt="検索" /></li>
+						</ul><!--end /.search_area -->
+					</form>
+				</div><!--end /.head_right -->
+			</div><!--end /.header -->
+
+			<ul class="gnav clearfix">
+				<li class="gnav_ho bod-l0"><a href="../index.html">ホーム</a></li>
+				<li class="gnav_sg"><a href="">サイトご案内</a></li>
+				<li class="gnav_bg"><a href="">ご購入ガイド</a></li>
+				<li class="gnav_sh"><a href="">お支払い・配送</a></li>
+				<li class="gnav_fq"><a href="">よくあるご質問</a></li>
+				<li class="bod-r0  gnav_su"><a href="">サポート</a></li>
+			</ul>
+			<!--end /.gnav -->
+
+			<div class="main mt15 mb30 clearfix">
+
+				<div class="content fr">
+					<div class="first_h1 al-c">
+						<h1><img src="../img/logo.png" alt="GoodForMUSIC" /></h1>
+						<p class="f20 mt5">あなたの音楽生活を応援します！GoodForMUSICへようこそ！</p>
+					</div><!-- /.first_hx -->
+					<div class="first_content">
+						<h2><span class="dots_b">.</span>GoodForMUSICとは</h2>
+						<p>「<span class="fw7">楽器をもっといろんな人に楽しんでもらいたい</span>」 そんな願いからGoodForMUSICは2009年にオープンしました。<br/>
+							我々は実店舗を持たないECサイトであるからこそ、出来るサービスがあると考えており、日々お客様のためを考え努力して参ります。<br/>
+							音楽に携っている、また携わろうとしている皆様のサポーター・応援者として、これからもご愛願のほどよろしくお願い致します。</p>
+					</div><!-- /.first_content -->
+					<div class="first_content">
+						<h3><span class="dots_b">.</span>新規会員登録</h3>
+						<p>GoodForMUSICのコンテンツを最大限にご利用頂くため、まずは左側サイドメニューにございます、<span class="fw7">新規会員登録より新規登録フォームへアクセスをお願いいたします</span>。<br/>必要な情報をご記入の上、ご登録いただきましたら、メールにてご連絡させていただきます。<br/>
+						GFM会員様限定の特典サービスなどもございますため、是非登録のご検討をいただけますようお願い致します。
+						</p>
+					</div><!-- /.first_content -->
+					<div class="first_content">
+						<h4><span class="dots_b">.</span>取り扱いコンテンツ</h4>
+						<p><span class="fw7">GoodForMUSICは楽器を主体としたECサイトとなっています。</span><br/>ギター・ベース・ドラム・キーボード・アンプ・エフェクター・DTM・各種アクセサリーのカテゴリに分類され<br/>
+						豊富な種類・ブランドの商品を取り揃えております。<br/>
+						また、音楽生活に対するアドバイスなどを特集記事やブログ、ソーシャルネットワークで発信させていただきます。<br/>
+						記事コンテンツは全て無料でご利用いただけますので、是非ともご活用くださいませ。
+						</p>
+					</div><!-- /.first_content -->
+				</div><!-- /.content -->
+
+				<div class="sidebar fl">
+					<ul class="side_entry">
+						<li class="mb5"><a href=""><img src="../img/side_entry_bnr1.gif" alt="はじめての方" /></a></li>
+						<li class="mb15"><a href=""><img src="../img/side_entry_bnr2.gif" alt="新規会員登録" /></a></li>
+					</ul>
+
+					<ul class="side_menu">
+						<li><a href="" class="sm_bset">初心者セット</a></li>
+						<li><a href=""class="sm_guitar">ギター</a></li>
+						<li><a href=""class="sm_base">ベース</a></li>
+						<li><a href="" class="sm_drum">ドラム</a></li>
+						<li><a href="" class="sm_key">キーボード</a></li>
+						<li><a href="" class="sm_amp">アンプ<br/>エフェクター</a></li>
+						<li><a href="" class="sm_dtm">DTM</a></li>
+						<li class="bod-b0"><a href="" class="sm_acc">各種<br/>アクセサリー</a></li>
+					</ul>
+
+					<div class="blog_parts mt20">
+						<h2><a href="">商品担当ブログ<br/>随時更新中！！</a></h2>
+						<ul>
+							<li><a href="">2013/11/30<br/>ギター担当の裏話<br/>
+								vol.2 初心者セットへのこだわり</a></li>
+						</ul>
+						<ul>
+							<li><a href="">2013/11/29<br/>
+							ドラム担当のワンポイント<br/>アドバイスvol.5 メンテナンス</a></li>
+						</ul>
+						<ul>
+							<li><a href="">2013/11/27<br/>
+							キーボード担当の裏話<br/>vol.3 メーカーごとの特徴</a></li>
+						</ul>
+					</div><!-- /.blog_ parts-->
+		
+					<div class="side_callender mt20">
+						<div id="calendar"></div>
+						<ul>
+							<li class="bod-t0 bod-b0">営業時間10:00～18:00</li>
+							<li class="sc_sat_att">15:00まで営業・出荷</li>
+							<li class="sc_sun_att bod-b0">定休日・祝祭日(午前出荷)</li>
+						</ul>
+					</div><!-- /.side_callender -->
+					
+				</div><!-- /.sidebar -->
+			</div><!-- /.main -->
+			
+		</div><!-- /.top_wrap -->
+
+
+				<!-- go to top -->
+					<div class="gototop">
+						<a href="#wrapper"><img src="../img/pgtop_btn.png" width="50" height="50" alt="トップへ" /></a>
+					</div>
+				<!-- go to top end-->
+
+				<div class="shopinfo_area clearfix">
+					<div class="shopinfo_inner clearfix">
+						<h2>ショップご利用ガイド</h2>
+						<div class="shopinfo_box ml20">
+							<h3 class="si_ship"><img src="../img/spi_ship.png" width="260" height="40" alt="" /></h3>
+						<div class="shopinfo_box_content">
+							<div class="shopinfo_ch clearfix">
+								<h4><span class="dots">.</span>
+									在庫ありの場合
+								</h4>
+								<a href="" class="si_ship_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22 f15"><span class="attention f18 fw7">2営業日以内</span>に出荷<span class="f12 cap_txt">(一部支払除く)</span></p>
+
+							<div class="shopinfo_ch clearfix">
+								<h4><span class="dots">.</span>
+									在庫なしの場合
+								</h4>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22"><span class="attention f18 fw7">5営業日以内</span>に出荷<br /><span class="f12 cap_txt">(メーカー品切れの場合を除く)</span></p>
+
+							<div class="shopinfo_ch clearfix mt10">
+								<h4><span class="dots">.</span>
+									配送日時指定
+								</h4>
+								<a href="" class="si_ship_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<img src="../img/shp_time.png" width="240" height="45" alt="配送時間指定" class="al-c mt5" />
+							<p class="al-c">曜日指定：指定なし・平日・日曜・土日祝<br />配送希望日：ご注文日より5日以降の日付からご指定頂けます</p>
+						</div><!-- /.shopinfo_box_content -->
+						</div><!-- /.shopinfo_box -->
+
+						<div class="shopinfo_box ml10 mr10">
+							<h3 class="si_pay"><img src="../img/spi_pay.png" width="260" height="40" alt="" /></h3>
+						<div class="shopinfo_box_content">
+								<div class="shopinfo_ch clearfix">
+									<h4><span class="dots">.</span>
+											お支払い方法
+									</h4>
+									<a href="" class="si_pay_a">詳しくはこちら</a>
+								</div><!-- /.shopinfo_ch-->
+								<p class="ind22 mt5"><span class="attention f18 fw7">クレジットカード・代金引換<br />銀行振込・コンビニ決済</span></p>
+								<img src="../img/card.jpg" width="256" height="30" alt="クレジットカード" />
+								<p class="cap_txt">(代引支払いは代引手数料315円(税込)が発生致します。
+									また、銀行振込時の手数料はお客様負担となりますため、予めご了承くださいませ。)</p>
+
+								<div class="shopinfo_ch clearfix mt15">
+									<h4><span class="dots">.</span>
+										送料
+									</h4>
+									<a href="" class="si_pay_a">詳しくはこちら</a>
+								</div><!-- /.shopinfo_ch -->
+								<p class="ind22 f15 mt5">ご購入<span class="attention fw7 f18">6000円以上</span>(税込)で<span class="attention  fw7 f18">無料</span></p>
+								<p class="al-c cap_txt">通常送料：全国一律525円(税込)</p>
+						</div><!-- /.shopinfo_box_content -->
+						</div><!-- /.shopinfo_box -->
+
+
+						<div class="shopinfo_box">
+							<h3 class="si_service"><img src="../img/spi_service.png" width="260" height="40" alt="" /></h3>
+						<div class="shopinfo_box_content">
+							<div class="shopinfo_ch clearfix">
+								<h4><span class="dots">.</span>
+									ポイントサービス
+								</h4>
+								<a href="" class="si_service_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22 mt5"><span class="attention f18 fw7">1ポイント＝100円</span>でご利用可能。</p>
+
+							<div class="shopinfo_ch clearfix mt20">
+								<h4><span class="dots">.</span>
+									レビュアーサービス
+								</h4>
+								<a href="" class="si_service_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22 mt5">ご購入後に商品のレビューをして頂くと<br />毎月抽選で<span class="attention f18 fw7">プレゼントが当たる！</span></p>
+
+							<div class="shopinfo_ch clearfix mt20">
+								<h4><span class="dots">.</span>
+									ギフト包装サービス
+								</h4>
+								<a href="" class="si_service_a">詳しくはこちら</a>
+							</div><!-- /.shopinfo_ch -->
+							<p class="ind22">ギフト向けの包装が<span class="attention f18 fw7">無料！</span></p>
+							<p class="ind22 cap_txt">(大きさや重さによって包装不可の場合がございます。事前にお問い合わせくださいませ。)</p>
+						</div><!-- /.shopinfo_box_content -->
+						</div><!-- /.shopinfo_box -->
+					</div><!-- /.shopinfo_inner -->
+				</div><!-- /.shopinfo_area -->
+
+				<div class="footer clearfix  p20-tb">
+					<div class="foot_inner clearfix">
+						<div class="foot_box ml10 ">
+							<h4><img src="../img/foot_logo.png" width="210" height="41" alt="Good for MUSIC" />	</h3>
+							<ul class="mt5">
+								<li>（株）グッドフォーミュージック</li>
+								<li>〒192-00XX 東京都八王子市OOXX1-2-34</li>
+								<li>TEL: 042-XXX-YYY FAX:042-AAA-BBB</li>
+								<li>E-mail:info@gfmusic.co.jp</li>
+								<li>営業時間：10時～18時 定休日：土日祝</li>
+								<li><small>&copy; 2013 Good for MUSIC, Inc.</small></li>
+							</ul>
+						</div><!-- /.foot_box -->
+						<div class="foot_box ml10">
+							<h4 class="mt5">ご案内・SNS</h4>
+							<div class="foot_box_inner m1"><ul class="fl">
+									<li><a href="">はじめての方へ</a></li>
+									<li><a href="">サイトのご案内</a></li>
+									<li><a href="">ご購入ガイド</a></li>
+									<li><a href="">お支払い,配送</a></li>
+									<li><a href="">よくあるご質問</a></li>
+									<li><a href="">サポート</a></li>
+								</ul>
+								<ul class="foot_sns fl">
+									<li><a href="">Twitter</a></li>
+									<li><a href="">Facebook</a></li>
+									<li><a href="">Youtube</a></li>
+									<li><a href="">Instagram</a></li>
+									<li><a href="">Tumblr</a></li>
+								</ul>
+							</div><!-- /.foot_box_inner -->
+						</div><!-- /.foot_box -->
+						<div class="foot_box ml10">
+							<h4 class="mt5">商品カテゴリ	</h4>
+						<div class="foot_box_inner m2"><ul class="fl">
+								<li><a href="">初心者セット</a></li>
+								<li><a href="">新製品</a></li>
+								<li><a href="">ギター</a></li>
+								<li><a href="">ベース</a></li>
+								<li><a href="">ドラム</a></li>
+								<li><a href="">キーボード</a></li>
+							</ul>
+							<ul class="fl ml20">
+								<li><a href="">DTM</a></li>
+								<li><a href="">各種アクセサリー</a></li>
+							</ul>
+							</div><!-- /.foot_box_inner -->
+						</div><!-- /.foot_box -->
+						<div class="foot_box">
+							<h4 class="mt5">会員メニュー</h4>
+							<div class="foot_box_inner m3">
+							<ul class="">
+								<li><a href="">新規会員登録</a></li><a href=""></a>
+								<li><a href="">ログイン</a></li>
+								<li><a href="">マイページ</a></li>
+								<li><a href="">各種クーポン</a></li>
+								<li><a href="">キャンペーン一覧</a></li>
+								<li><a href="">お得なサービス</a></li>
+							</ul>
+							</div><!-- /.foot_box_inner -->
+						</div><!-- /.foot_box -->
+					</div><!-- /.foot_inner -->
+				</div><!-- /.footer -->
+
+	</div><!--end /#wrapper -->
+</body>
+
+</html>

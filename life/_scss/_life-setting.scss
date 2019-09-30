@@ -1,0 +1,110 @@
+// Common
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  background: $bgColor;
+  color: $color;
+  font-family: $font;
+  font-size: 14px;
+  background: url(../img/bg.png) 0 0 repeat;
+  height: 100%;
+  
+  // Text Highlight
+  ::selection {
+    background: $color-link;
+    color: $color-inverse;
+  }
+}
+
+a {
+  color: $color-link;
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+    color: lighten($color-link, 20%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // for CSS Reset
+  // font-weight: bold;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  @include hoverEffect;
+  vertical-align:bottom; 
+}
+
+$inner-width: 980px;
+$main-width:780px;
+$side-width:200px;
+
+
+/*-- shot cuts --*/
+  .fl{  float: left;}
+  .fr{float: right;}
+  .clb{clear: both;}
+
+  .tal{text-align:left;}
+  .tac{text-align:center;}
+  .tar{text-align:right;}
+
+  .inline{display: inline !important;}
+  .block{display: block !important;}
+  .inblock{display: inline-block !important;}
+  .distable{display: table;}
+  .distbc{display: table-cell;}
+    
+  .clearfix:after {
+    content: " ";  
+    display: block; 
+    visibility: hidden; 
+    clear: both; 
+    height: 0.1px; 
+    font-size: 0.1em; 
+    line-height: 0; 
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /**//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+/*-- shot cuts --*/
+
+$life-color-main:#162c35;
+$life-color-sub:#2c5769;
+$life-color-tri:#7cadb6;
+$life-color-accent:#2fcdb4;
+$life-color-attention:#ff534a;
+.txt-caption{color: #666;}
+.attention{color:#ff534a !important;font-weight: 700;}
+
+$main-rgb:rgba(22,44,53,.7);
+$sub-rgb:rgba(44,87,105,.5);
+$tri-rgb:rgba(124,173,182,.3);
+$accent-rgb:rgba(47,205,180,.3);
+$attention-rgb:rgba(255,83,74,.3);
